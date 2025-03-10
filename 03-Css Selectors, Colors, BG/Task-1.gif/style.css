@@ -1,0 +1,10 @@
+#text {
+    background-image: url("View.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+p {
+    color: yellow;
+}
