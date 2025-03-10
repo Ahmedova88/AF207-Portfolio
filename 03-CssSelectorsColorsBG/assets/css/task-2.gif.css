@@ -1,0 +1,14 @@
+div {
+    background-image: url("../images/task-2.gif.jpg");
+    background-size: 250px 250px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: black   ;
+    width: 800px;
+    height: 400px;
+    border: 8px solid black;
+    margin: 150px ;
+    margin-left: 365px;
+    overflow: auto;
+}
+

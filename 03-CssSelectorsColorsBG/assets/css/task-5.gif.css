@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+.div {
+    display: flex;
+    margin-left: 300px;
+    /*Bütün div-lər aarasında 40px boshlug*/
+    gap: 40px;
+}
+
+.fixed {
+    background-image: url("../images/task-5.gif.png");
+    width: 250px;
+    height: 200px;
+    overflow: auto;
+    padding: 15px;
+}
+
+.local {
+    background-image: url("../images/task-5.gif.png");
+    background-position: top left;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 200px;
+    overflow: auto;
+    padding: 15px;
+}
+
+.scroll{
+    background-image: url("../images/task-5.gif.png");
+    background-position: top left;
+    background-size: 180px 180px;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 200px;
+    overflow: auto;
+    padding: 15px;
+}

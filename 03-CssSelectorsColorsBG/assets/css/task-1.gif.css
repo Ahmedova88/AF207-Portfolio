@@ -1,0 +1,10 @@
+#text {
+    background-image: url("../images/task-1.gif.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+p {
+    color: yellow;
+}
