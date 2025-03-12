@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4e9db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.container {
+    background: #F39C11;
+    padding: 170px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    height: 500px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+select option {
+    background: #222;
+    color: white;
+}
