@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+.fixed {
+  background: white;
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  position: fixed;
+}
+.fixed .reklam .sale {
+  margin-left: 20rem;
+  padding: 1rem;
+  color: #666666;
+  font-size: 1.5rem;
+}
+.fixed .reklam .sale .templated {
+  color: white;
+  background: #ff6098;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+.fixed .reklam img {
+  cursor: pointer;
+}
+.fixed .theory {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.fixed .theory h1 {
+  font-size: 1.5rem;
+  color: #444;
+}
+.fixed .theory p {
+  color: #666666;
+  font-size: 1.5rem;
+}
+.fixed .btns .download {
+  height: 4rem;
+  display: flex;
+  gap: 0.8rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #5FCEC0;
+  padding: 1.5rem 7rem;
+  border-radius: 0.8rem;
+}
+.fixed .btns .icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.fixed .btns .icon {
+  height: 4rem;
+  background: transparent;
+  border: 1px solid #908b8b;
+  padding: 1.5rem 3rem;
+  border-radius: 0.8rem;
+}
+
+.background {
+  color: white;
+  text-align: center;
+  background-image: url(https://news24.az/uploads/posts/2024-11/1000031500.webp);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+}
+.background .nav {
+  width: 100%;
+  display: flex;
+  padding: 6rem 15rem 0 15rem;
+  justify-content: space-between;
+}
+.background .nav h1 {
+  cursor: pointer;
+}
+.background .nav ul {
+  display: flex;
+  gap: 1.5rem;
+  color: #d4c6c6;
+  cursor: pointer;
+}
+.background .title {
+  margin-top: 13rem;
+  font-size: 5rem;
+  color: #d4c6c6;
+}
+.background .subtitle {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 13rem;
+  color: #666666;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.container .column {
+  width: 27%;
+  padding: 20px;
+}
+.container .column span {
+  font-size: 2rem;
+  color: #4682b4;
+}
+.container .column p {
+  font-size: 1.5rem;
+  color: #666666;
+  padding: 2rem 0 2rem 0;
+}
+.container .column button {
+  background-color: #5a82c4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.container .column button:hover {
+  background-color: #3a6aa3;
+}
+.container .divider {
+  width: 1px;
+  background-color: #ccc;
+  height: 150px;
+  margin: 0 20px;
+}
+
+.people {
+  text-align: center;
+  background-color: #5a82c4;
+}
+.people .ipsum {
+  padding-top: 8rem;
+  font-size: 4rem;
+  color: #f6f9fc;
+}
+.people p {
+  color: #bacee6;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.people .team {
+  padding: 5rem 0 9rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+.people .team .member {
+  border: 1px solid #bacee6;
+  padding: 4.4rem 2.2rem;
+}
+.people .team .member img {
+  border-radius: 50%;
+}
+.people .team .member .name {
+  color: #f6f9fc;
+  font-size: 2rem;
+  padding: 2rem 0 1rem 0;
+}
+
+.nunc h1 {
+  margin-top: 8rem;
+  text-align: center;
+  color: #4682b4;
+  font-size: 4rem;
+}
+.nunc p {
+  text-align: center;
+  color: #666666;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+.nunc .container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.nunc .container .card {
+  width: 40%;
+  text-align: left;
+}
+.nunc .container .card img {
+  width: 100%;
+}
+.nunc .container .card h2 {
+  color: #4682b4;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.nunc .container .card p {
+  color: #666666;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1.5rem 0 2rem 0;
+}
+.nunc .container .card .btn {
+  display: inline-block;
+  background-color: #5a82c4;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.nunc .container .card .btn:hover {
+  background-color: #3a6aa3;
+}
+
+footer {
+  margin: 0 17rem 0 17rem;
+}
+footer .icon i {
+  color: #5a82c4;
+  font-size: 1.5rem;
+  padding: 4.5rem 0 4.5rem 2rem;
+}
+footer p {
+  text-align: center;
+  color: #666666;
+  padding-bottom: 2rem;
+}
+footer p strong {
+  color: black;
+  cursor: pointer;
+}
+footer p strong:hover {
+  color: #666666;
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
