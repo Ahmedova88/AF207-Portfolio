@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav_area {
+  background: #212529;
+}
+#nav_area .container .row .col-2 {
+  color: goldenrod;
+  font-style: italic;
+}
+#nav_area .container .row .col-10 ul {
+  gap: 30px;
+}
+
+#main_area {
+  height: 70vh;
+  padding: 120px 0px;
+  margin-bottom: 80px;
+  background-image: url(https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg);
+}
+#main_area .btn {
+  padding: 15px;
+  margin-top: 40px;
+  border: solid goldenrod;
+  background: goldenrod;
+}
+
+#team .container .grid, footer .container .grid {
+  margin-left: 150px;
+}
+#team .container .grid i, footer .container .grid i {
+  height: 30px;
+  width: 30px;
+}
+
+#contact {
+  height: 70vh;
+  margin-top: 100px;
+  padding: 60px 0px;
+  background-image: url(https://i.pinimg.com/736x/27/63/de/2763de71b56a726461b0bfa43b1f9252.jpg);
+}
+#contact .text-center {
+  text-align: center !important;
+}
+#contact .btn {
+  padding: 15px;
+  margin-top: 40px;
+  border: solid goldenrod;
+  background: goldenrod;
+}/*# sourceMappingURL=style.css.map */
