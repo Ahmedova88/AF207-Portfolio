@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Task1. Calculator */
+.calculator {
+    background: #5F9D9FFF;
+    width: 600px;
+    height: 250px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#enterInput1,
+#enterInput2 {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+#resultInput {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 40px;
+    padding-left: 10px;
+}
+
+.plus_btn,
+.minus_btn,
+.mult_btn,
+.devide_btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+
+/* Task2. TodoList. */
+
+
+
+  
+.todo-container {
+    width: 600px;
+    margin: 50px auto;
+}
+  
+.addTask {
+    display: flex;
+    flex-direction: column;
+    background-color: #BBB499FF;
+    padding: 15px;
+    border-radius: 10px;
+}
+  
+#taskInput {
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+  
+#addBtn {
+    background-color: #184C63FF;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#deleteAllBtn {
+    margin-top: 20px;
+    background-color: #184C63FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BBB499FF;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: red;
+}
+
+  
+.taskList {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.listItem {
+    height: 60px;
+    background-color: #BBB499FF;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trash,
+.edit {
+    background: #184C63FF;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.setting {
+    padding-right: 10px;
+}
+
+.bttn {
+    border: 1px solid black;
+    background: white;
+    width: 20px;
+    height: 20px;
+    margin-top: 7px;
+    border-radius: 50%;
+}
+
+.task {
+    display: flex;
+}
