@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+  }
+  
+  .register_area {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register {
+    width: 400px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgb(136, 219, 252), rgb(179, 179, 174));
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .submit {
+    width: 100%;
+  }
+  
+  .account-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .account-link:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+  }
+  
