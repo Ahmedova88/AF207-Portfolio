@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || []
-    let currentUser = users.find(user => user.islogined === true)
-  
+    let currentUser = users.find(user => user.isLogined === true)
+      
     if (!currentUser) {
       window.location.href = "login.html"
       return

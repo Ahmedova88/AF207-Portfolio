@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let isLoginedUser = users.find((user) => user.isLogined === true);
 
-    let userBtn = document.querySelector(".username a");
+    let userBtn = document.querySelector(".username");
     let login = document.querySelector(".login");
     let register = document.querySelector(".register");
     let logout = document.querySelector(".logout");
@@ -332,10 +332,36 @@ document.addEventListener("DOMContentLoaded", () => {
         cardRating.append(cardRate, cardReviewsCount)
         cardFooter.append(cardPrice, cardRating)
         cardContent.append(cardTitle, cardCategory, cardFooter, addBtn)
-        card.append(heartIcon, cardImage, cardContent)
+        card.append(heartIcon, cardImage, cardContent, addBtn)
 
         let cards = document.querySelector(".cards")
         cards.appendChild(card)
+
+
+      addBtn.addEventListener("click", (productId) => {
+        if (!isLoginedUser) {
+          sweetToast("Please login to basket.")
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 1500);
+          return;
+        }
+
+        let userIndex = users.findIndex(u => u.id === isLoginedUser.id);
+        let basket = isLoginedUser.basket || [];
+        
+        let findProduct = basket.find((product) => product.id == productId)
+
+        if (findProduct) {
+          findProduct.count++
+        } else {
+          let existProduct = products.find((product) => product.id == productId)
+          basket.push({...existProduct, count: 1})
+        }
+        users[userIndex].basket = basket;
+        localStorage.setItem("users", JSON.stringify(users))
+        sweetToast("Product added to basket successfully...")
+      });
         })
 
     }
@@ -370,11 +396,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (userIndex !== -1) {
           users[userIndex] = isLoginedUser;
           localStorage.setItem("users", JSON.stringify(users));
-          
         } 
       }
       
-
+    updateUserStatus()
     createUserCard()
 });
 
