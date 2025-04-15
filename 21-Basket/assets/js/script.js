@@ -244,12 +244,19 @@ let products = [
 document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    let isLoginedUser = users.find((user) => user.isLogined === true);
-
-    let userBtn = document.querySelector(".username");
+    let isLoginedUser = users.find((user) => user.isLogined == true);
+    let userIndex = isLoginedUser ? users.findIndex((user) => user.id == isLoginedUser.id) : -1;
+    let userBtn = document.querySelector(".username a");
     let login = document.querySelector(".login");
     let register = document.querySelector(".register");
     let logout = document.querySelector(".logout");
+
+    if (isLoginedUser) {
+      let basket = isLoginedUser.basket || [];
+    } else {
+      console.log("Istifadeci tapilmadi, zehmet olmasa sisteme daxil olun")
+    }
+    
 
     function updateUserStatus() {
         if (isLoginedUser) {
@@ -328,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let addBtn = document.createElement("button")
         addBtn.classList.add("btn", "btn-primary", "add-to-cart")
         addBtn.textContent = "Add Basket"
+        addBtn.addEventListener("click", () => addBasket(product.id))
 
         cardRating.append(cardRate, cardReviewsCount)
         cardFooter.append(cardPrice, cardRating)
@@ -337,31 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let cards = document.querySelector(".cards")
         cards.appendChild(card)
 
-
-      addBtn.addEventListener("click", (productId) => {
-        if (!isLoginedUser) {
-          sweetToast("Please login to basket.")
-          setTimeout(() => {
-            window.location.href = "login.html";
-          }, 1500);
-          return;
-        }
-
-        let userIndex = users.findIndex(u => u.id === isLoginedUser.id);
-        let basket = isLoginedUser.basket || [];
-        
-        let findProduct = basket.find((product) => product.id == productId)
-
-        if (findProduct) {
-          findProduct.count++
-        } else {
-          let existProduct = products.find((product) => product.id == productId)
-          basket.push({...existProduct, count: 1})
-        }
-        users[userIndex].basket = basket;
-        localStorage.setItem("users", JSON.stringify(users))
-        sweetToast("Product added to basket successfully...")
-      });
         })
 
     }
@@ -399,6 +382,54 @@ document.addEventListener("DOMContentLoaded", () => {
         } 
       }
       
+    function addBasket(productId) {
+      if (!isLoginedUser) {
+          sweetToast("Please login to basket.")
+
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 1500);
+          return;
+        }
+
+        if (isLoginedUser) {
+          let basket = isLoginedUser.basket || [];
+          let findProduct = basket.find((product) => product.id == productId)
+          if (findProduct) {
+          findProduct.count++
+        } else {
+          let existProduct = products.find((product) => product.id == productId)
+          basket.push({ ...existProduct, count: 1 })
+        }
+        users[userIndex].basket = basket;
+        localStorage.setItem("users", JSON.stringify(users))
+        sweetToast("Product added to basket successfully...")
+        basketCount()
+        } else {
+          console.error("Istifadeci tapilmadi, zehmet olmasa sisteme daxil olun")
+        }
+
+        
+    }
+
+    function basketCount() {
+      if (isLoginedUser) {
+        let basket = isLoginedUser.basket || [];
+        let basketItemCount = basket.reduce(
+        (acc, product) => acc + product.count, 
+        0
+      )
+      let basketCountElem = document.querySelector(".basketIcon sup")
+      basketCountElem.textContent = basketItemCount
+      } else {
+        console.log("Istifadeci tapilmadi, zehmet olmasa sisteme daxil olun")
+      }
+      
+
+      
+    }
+
+    basketCount()
     updateUserStatus()
     createUserCard()
 });
