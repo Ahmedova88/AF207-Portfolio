@@ -264,7 +264,7 @@ function findProducts() {
 
 
 
-findProducts().then((products) => {
+  findProducts().then((products) => {
     let findProduct = products.find((product) => product.id == id)
 
     let productContainer = document.querySelector(".product-container")
@@ -325,50 +325,37 @@ findProducts().then((products) => {
     productRating.append(ratingRate, ratingCount)
     quantitySelector.append(minusBtn, quantitySelectorInput, plusBtn)
     productDetails.append(productTitle, productCategory, productPrice, productDesc, productRating, quantitySelector, addToCartBtn)
-    productContainer.appendChild(productDetails)
-})
+    productContainer.append(productImage, productDetails)
 
+    
+    addToCartBtn.addEventListener("click", () => {
+        let quantity = Number(quantitySelectorInput.value);
+        let existingProduct = basket.find(item => item.id == findProduct.id);
 
+        if (existingProduct) {
+            existingProduct.count += quantity;
+        } else {
+            basket.push({
+                ...findProduct,
+                count: quantity
+            });
+        }
 
+        users[userIndex].basket = basket;
+        localStorage.setItem("users", JSON.stringify(users));
 
+        sweetToast("Product added to basket!");
+    });
 
+    plusBtn.addEventListener("click", () => {
+        quantitySelectorInput.value = Number(quantitySelectorInput.value) + 1;
+    });
 
-let addBtn = document.querySelector(".add-to-cart-btn")
-addBtn.addEventListener("click", () => {
-    let quantity = Number(document.querySelector(".quantity-selector input").value);
-    let existingProduct = basket.find(item => item.id == findProduct.id);
-
-    if (existingProduct) {
-        existingProduct.count += quantity;
-    } else {
-        basket.push({
-            ...findProduct,
-            count: quantity
-        });
-    }
-
-    users[userIndex].basket = basket;
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Product added to basket!");
-})
-
-
-
-
-
-let plusBtn = document.querySelector(".btn-plus")
-plusBtn.addEventListener("click", () => {
-    let input = document.querySelector(".quantity-selector input");
-    input.value = Number(input.value) + 1;
-    console.log(plusBtn, input);
-});
-
-document.querySelector(".btn-minus").addEventListener("click", () => {
-    let input = document.querySelector(".quantity-selector input");
-    if (Number(input.value) > 1) {
-        input.value = Number(input.value) - 1;
-    }
+    minusBtn.addEventListener("click", () => {
+        if (Number(quantitySelectorInput.value) > 1) {
+            quantitySelectorInput.value = Number(quantitySelectorInput.value) - 1;
+        }
+    });
 });
 
 
