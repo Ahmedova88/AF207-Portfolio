@@ -40,12 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
             wishlistTag.appendChild(wishlistItem)
    
             removeBtn.addEventListener("click", () => {
-                // wishlist-dən məhsulu sil
                 userWishlist = userWishlist.filter(prod => prod.id !== item.id);
                 users.find(user => user.id === isLoginedUser.id).wishlist = userWishlist;
                 localStorage.setItem("users", JSON.stringify(users));
     
-                // DOM-dan da sil
                 wishlistItem.remove();
 
                 sweetToast("Product removed from wishlist...")

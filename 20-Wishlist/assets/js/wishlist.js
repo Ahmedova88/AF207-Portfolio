@@ -38,9 +38,30 @@ document.addEventListener("DOMContentLoaded", () => {
         let wishlistTag = document.querySelector(".wishlist")
         wishlistTag.appendChild(wishlistItem)
    
+        removeBtn.addEventListener("click", () => {
+            userWishlist = userWishlist.filter(prod => prod.id !== item.id);
+            users.find(user => user.id === isLoginedUser.id).wishlist = userWishlist;
+            localStorage.setItem("users", JSON.stringify(users));
+
+            wishlistItem.remove();
+
+            sweetToast("Product removed from wishlist...")
+        });
 
         });
 
     }
  createWishlistItem()
 })
+ 
+let sweetToast = (text) => {
+    Toastify({
+        text: `${text}`,
+        duration: 3000,
+        position: "right",
+        stopOnFocus: true,
+        style: {
+        background: "linear-gradient(to right, rgb(136, 219, 252), rgb(179, 179, 174));",
+        },
+      }).showToast();
+}
