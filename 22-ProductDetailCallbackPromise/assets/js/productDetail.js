@@ -262,39 +262,73 @@ function findProducts() {
     });
   }
 
-let productContainer = document.querySelector(".product-container")
+
 
 findProducts().then((products) => {
     let findProduct = products.find((product) => product.id == id)
-    
-    productContainer.innerHTML = `
-            <div class="product-image">
-              <img class="img" src="${findProduct.image}" alt="Product Image">
-            </div>
 
-            <div class="product-details">
-              <h4 class="product-title">${findProduct.title}</h4>
-              <p class="product-category">${findProduct.category}</p>
-              <p class="product-price">${findProduct.price}</p>
-              <p class="product-description">${findProduct.description}</p>
+    let productContainer = document.querySelector(".product-container")
 
-              <div class="product-rating">
-                <span>⭐ ${findProduct.rating.rate}</span>
-                <span>(${findProduct.rating.count} reviews)</span>
-              </div>
+    let productImage = document.createElement("div")
+    productImage.classList.add("product-image")
 
-              <div class="quantity-selector">
-                <button class="btn-minus">-</button>
-                <input class ="quantity-selector input" type="number" value="1" min="1">
-                <button class="btn-plus">+</button>
-              </div>
+    let img = document.createElement("img")
+    img.src = findProduct.image
+    productImage.appendChild(img)
 
-              <button class="btn btn-danger add-to-cart-btn">Add to Cart</button>
-            </div>
-`
+    let productDetails = document.createElement("div")
+    productDetails.classList.add("product-details")
+
+    let productTitle = document.createElement("h4")
+    productTitle.classList.add("product-title")
+    productTitle.textContent = findProduct.title
+
+    let productCategory = document.createElement("p")
+    productCategory.classList.add("product-category")
+    productCategory.textContent = findProduct.category
+
+    let productPrice = document.createElement("p")
+    productPrice.classList.add("product-price")
+    productPrice.textContent = findProduct.price
+
+    let productDesc = document.createElement("p")
+    productDesc.classList.add("product-description")
+    productDesc.textContent = findProduct.description
+
+    let productRating = document.createElement("div")
+    productRating.classList.add("product-rating")
+
+    let ratingRate = document.createElement("span")
+    ratingRate.textContent = `⭐ ${findProduct.rating.rate}`
+
+    let ratingCount = document.createElement("span")
+    ratingCount.textContent = `(${findProduct.rating.count} reviews)`
+
+    let quantitySelector = document.createElement("div")
+    quantitySelector.classList.add("quantity-selector")
+
+    let minusBtn = document.createElement("button")
+    minusBtn.classList.add("btn-minus")
+    minusBtn.textContent = "-"
+
+    let quantitySelectorInput = document.createElement("input")
+    quantitySelectorInput.value = 1
+
+    let plusBtn = document.createElement("button")
+    plusBtn.classList.add("btn-plus")
+    plusBtn.textContent = "+"
+
+    let addToCartBtn = document.createElement("button")
+    addToCartBtn.classList.add("btn", "btn-danger", "add-to-cart-btn")
+    addToCartBtn.textContent = "Add to Cart"
+
+    productRating.append(ratingRate, ratingCount)
+    quantitySelector.append(minusBtn, quantitySelectorInput, plusBtn)
+    productDetails.append(productTitle, productCategory, productPrice, productDesc, productRating, quantitySelector, addToCartBtn)
+    productContainer.appendChild(productDetails)
 })
 
-/*
+
 
 
 
@@ -337,7 +371,7 @@ document.querySelector(".btn-minus").addEventListener("click", () => {
     }
 });
 
-*/
+
 
 let sweetToast = (text) => {
     Toastify({
