@@ -1,4 +1,4 @@
-let products = [
+/*``let products = [
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -239,14 +239,17 @@ let products = [
         "count": 145
       }
     }
-  ]
+  ] */
 
 let Url = new URLSearchParams(location.search)
 let id = Url.get("id")
 
+let getData = async () => {
+  let response = await axios ("http://localhost:3000/products")
+  let products = response.data
+  console.log(products);
 
-
-let users = JSON.parse(localStorage.getItem("users"))
+  let users = JSON.parse(localStorage.getItem("users"))
     let isLoginedUser = users.find((user) => user.isLogined == true)
     let userIndex = users.findIndex((user) => user.id == isLoginedUser.id)
     let basket = isLoginedUser.basket
@@ -357,6 +360,11 @@ function findProducts() {
         }
     });
 });
+  
+}
+getData()
+
+
 
 
 
