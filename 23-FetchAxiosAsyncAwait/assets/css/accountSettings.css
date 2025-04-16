@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+#accountForm {
+    width: 800px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgb(136, 219, 252), rgb(179, 179, 174));
+    margin: 0 auto;
+  }
+  
+
+  .account-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+  }
+  
+#editUsername,
+#editEmail,
+#editPassword {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s
+  }  
