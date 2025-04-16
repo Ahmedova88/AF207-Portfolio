@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("users", JSON.stringify(users));
     
                 wishlistItem.remove();
-
+ 
                 sweetToast("Product removed from wishlist...")
             });
 
