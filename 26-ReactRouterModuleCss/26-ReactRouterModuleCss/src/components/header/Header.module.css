@@ -1,0 +1,36 @@
+.header {
+    background-color: #212529FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 48px 0;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.p {
+    color: #8D9194FF;
+    font-size: 20px;
+    padding: 25px 0;
+}
+
+.button1,
+.button2 {
+background-color: #0D6EFDFF;
+color: #fff;
+padding: 15px;
+border-radius: 8px;
+border: none;
+font-size: 20px;
+}
+
+.button2 {
+background-color: transparent;
+border: 1px solid white;
+}
