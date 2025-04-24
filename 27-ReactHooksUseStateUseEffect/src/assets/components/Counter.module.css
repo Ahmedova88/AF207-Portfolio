@@ -1,0 +1,69 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #5a189a;
+    text-align: center;
+  }
+  
+  .counterBox {
+    background-color: #f0f4ff;
+    border: 2px solid #d0dfff;
+    border-radius: 12px;
+    padding: 30px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(90, 24, 154, 0.2);
+  }
+  
+  .count {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #14213d;
+  }
+  
+  .buttons1,
+  .buttons2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8338ec;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3a0ca3;
+  }
+  
+  .input {
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #6a1b9a;
+    border-radius: 10px;
+    margin: 10px auto;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input:focus,
+  .input:hover {
+    border-color: #ab47bc;
+    box-shadow: 0 0 8px #8338ec;
+  }
+  
