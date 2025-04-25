@@ -1,62 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Task1. Calculator */
-.calculator {
-    background: #5F9D9FFF;
-    width: 600px;
-    height: 250px;
-    margin: 50px auto;
-    text-align: center;
-    border-radius: 5px;
-}
-
-#enterInput1,
-#enterInput2 {
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 30px;
-    padding-left: 10px;
-}
-
-#resultInput {
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 40px;
-    padding-left: 10px;
-}
-
-.plus_btn,
-.minus_btn,
-.mult_btn,
-.devide_btn {
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    margin-top: 40px;
-    cursor: pointer;
-    margin-left: 15px;
-}
-
-
-/* Task2. TodoList. */
-
-
-
-  
 body {
     background: #f2f2f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.todo-container {
+.todo_container {
     width: 100%;
     max-width: 600px;
     margin: 50px auto;
@@ -110,6 +57,7 @@ body {
 }
 
 .taskList {
+    width: 560px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -146,11 +94,11 @@ body {
 }
 
 .trash,
-.edit {
+.edit,
+.bttn {
     background: #184C63FF;
     color: #fff;
     padding: 8px 12px;
-    margin-left: 5px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -158,21 +106,71 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.trash:hover,
-.edit:hover {
-    background: #0f354a;
+.trash:hover {
+    background: red;
 }
 
-.bttn {
-    border: 1px solid #444;
-    background: #fff;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
+.edit:hover {
+    background: green;
 }
 
 .bttn:hover {
-    background: #ccc;
+    background: green;
+    color: white;
+}
+
+.setting {
+    display: flex;
+    gap: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modalContent {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.modalInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.modalSaveBtn,
+.modalCloseBtn {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modalSaveBtn {
+    background-color: #184C63;
+    color: white;
+}
+
+.modalCloseBtn {
+    background-color: #aaa;
+    color: white;
 }
