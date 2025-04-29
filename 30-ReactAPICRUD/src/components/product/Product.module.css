@@ -1,0 +1,18 @@
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.deleteIcon {
+  color: #dc3545;
+}
+
+.editIcon {
+  color: #17a2b8;
+}
