@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "abdd",
+      "name": "Gunay",
+      "surname": "Ahmedova",
+      "username": "Gunay08",
+      "email": "ehmedovagunay45@gmail.com",
+      "password": "@Gunay08@",
+      "confirmpassword": "@Gunay08@"
+    },
+    {
+      "id": "c6df",
+      "name": "Ahmadova",
+      "surname": "Gunay",
+      "username": "Gunay08",
+      "email": "ehmedovagunay45@gmail.com",
+      "password": "@Gunay08",
+      "confirmpassword": "@Gunay08"
+    },
+    {
+      "id": "df86",
+      "name": "Ahmadova",
+      "surname": "Gunay",
+      "username": "ehmedovagunay45@gmail.com",
+      "email": "ehmedovagunay45@gmail.com",
+      "password": "$Gunay08$",
+      "confirmpassword": "$Gunay08$"
+    }
+  ]
+}
