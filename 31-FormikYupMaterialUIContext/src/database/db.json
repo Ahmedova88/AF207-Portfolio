@@ -26,6 +26,15 @@
       "email": "ehmedovagunay45@gmail.com",
       "password": "$Gunay08$",
       "confirmpassword": "$Gunay08$"
+    },
+    {
+      "id": "776b",
+      "name": "Brilyant",
+      "surname": "Allahverdizade",
+      "username": "wiener",
+      "email": "brilyantallahverdizade@gmail.com",
+      "password": "@Brilyant1",
+      "confirmpassword": "@Brilyant1"
     }
   ]
 }
