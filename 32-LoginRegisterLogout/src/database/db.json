@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "8b2f",
+      "name": "Günay",
+      "surname": "Əhmədova",
+      "username": "wiener",
+      "email": "ehmedovagunay45@gmail.com",
+      "password": "@Gunay08",
+      "confirmpassword": "@Gunay08",
+      "isLogined": false
+    }
+  ]
+}
