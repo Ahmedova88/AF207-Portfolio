@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Ali",
+      "surname": "Mammadov",
+      "age": 20,
+      "isStudent": true
+    },
+    {
+      "name": "Xedice",
+      "surname": "Shikhaliyeva",
+      "age": 19,
+      "isStudent": true,
+      "id": "c349"
+    },
+    {
+      "id": "eb53",
+      "name": "Gunay",
+      "surname": "Ahmadova",
+      "age": 20,
+      "isStudent": true
+    }
+  ]
+}
